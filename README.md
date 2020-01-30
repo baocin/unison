@@ -68,6 +68,17 @@ git submodule init
 git submodule update
 ```
 
+Note: If you get this error:
+```                     
+--  While building package haskeline-0.7.5.0 using:
+      /home/aoi/.stack/setup-exe-cache/x86_64-linux-tinfo6/Cabal-simple_mPHDZzAJ_2.4.0.1_ghc-8.6.5 --builddir=.stack-work/dist/x86_64-linux-tinfo6/Cabal-2.4.0.1 build lib:haskeline --ghc-options " -fdiagnostics-color=always"
+    Process exited with code: ExitFailure 1
+```
+check to make sure `libtinfo-dev` is installed for your operating system. Below is how you would do it on Ubuntu based distributions.
+```
+sudo apt-get install libtinfo-dev
+```
+
 See [`development.markdown`](development.markdown) for a list of build commands you'll likely use during development.
 
 A brief tour of the Haskell code
